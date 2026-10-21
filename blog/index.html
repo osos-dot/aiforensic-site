@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog · aiforensic.io</title>
+<meta name="description" content="Tell an AI it's wrong. It often agrees. Even when it's right. An independent, pre-registered study of 8 AI models from 6 labs, released 21 October 2026.">
+<meta property="og:title" content="The AI Pushback Study · aiforensic.io">
+<meta property="og:image" content="https://aiforensic.io/og-pushback.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d2a28; --surface:#123633; --ink:#eef4f2; --muted:#9fb7b3; --line:#24504c; --teal:#7ECDC8; --teal-deep:#1B5E5A; --teal-soft:#17423f; --yellow:#F5C518; --yellow-soft:#3b3a1c;
+  --v-research:#7ECDC8; --v-launch:#F5C518; --v-website:#7FA9D1; --v-business:#7CC49A; --v-product:#D7A3B8;
+  --display:"Bebas Neue","Arial Narrow",Impact,sans-serif; --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"Space Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){:root{ --bg:#f2f5f4; --surface:#ffffff; --ink:#10221f; --muted:#4f6461; --line:#d3dedb; --teal:#1B5E5A; --teal-soft:#e2efed; --yellow-soft:#fbf1c9;
+  --v-research:#1B5E5A; --v-launch:#B8860B; --v-website:#2E5E8C; --v-business:#2F7A4E; --v-product:#8C2F4F; color-scheme:light }}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+a{color:var(--teal)}
+.wrap{max-width:1000px;margin:0 auto;padding:28px 16px 64px}
+header{border-bottom:1.5px solid var(--line);padding-bottom:16px}
+.brandrow{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.wordmark{font-size:22px;line-height:1;letter-spacing:-.3px}
+.wordmark .ai{font-weight:300;opacity:.45}.wordmark b{font-weight:700}.wordmark .io{color:var(--teal)}
+.tagline{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:5px}
+.navlink{font-family:var(--mono);font-size:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;text-decoration:none}
+.navlink:hover{border-color:var(--teal)}
+.hero{padding:56px 0 40px;border-bottom:1.5px solid var(--line)}
+.sub{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(64px,12vw,120px);line-height:.9;letter-spacing:.5px;margin:14px 0 22px}
+h1 span{color:var(--yellow)}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:36em}
+section{margin-top:36px}
+.sechead{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+h2{font-family:var(--display);font-weight:400;font-size:34px;letter-spacing:.5px;line-height:1}
+.sechead .date{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.card{background:var(--surface);border:1.5px solid var(--line);border-top:6px solid var(--c,var(--teal));border-radius:10px;padding:20px 22px}
+.card .k{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.card .big{font-family:var(--display);font-weight:400;font-size:34px;line-height:1.02;letter-spacing:.3px;margin:8px 0 10px}
+.card p{color:var(--muted)}
+.card p b{color:var(--ink)}
+.pill{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:700;background:var(--yellow-soft);color:var(--ink);border-radius:5px;padding:2px 8px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:14px}
+.grid .card h3{font-family:var(--display);font-weight:400;font-size:26px;letter-spacing:.5px;line-height:1;margin:6px 0 8px}
+.grid .card p{font-size:14.5px}
+.who p+p{margin-top:10px}
+.small{font-size:13.5px}
+footer{margin-top:44px;border-top:1.5px solid var(--line);padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--muted)}
+</style>
+<style>
+.hero2{padding:34px 0 10px}.titleblk{border-left:5px solid var(--yellow);padding:4px 0 4px 16px;margin-bottom:22px}.stitle{font-family:var(--display);font-size:44px;line-height:1;margin:6px 0 8px;font-weight:400}.smeta{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:13px;color:var(--muted)}.smeta b{color:var(--ink);font-weight:700}.kick{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--teal);text-transform:uppercase}
+.h1b{font-family:var(--display);font-size:clamp(48px,7vw,80px);line-height:.92;margin:12px 0 18px;font-weight:400}.h1b span{color:var(--yellow)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+.st{background:var(--surface);border:1.5px solid var(--line);border-top:5px solid var(--c);border-radius:10px;padding:14px 16px}
+.st b{display:block;font-family:var(--display);font-weight:400;font-size:64px;line-height:1;color:var(--c)}.st span{font-size:14.5px;color:var(--muted)}
+.chart{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:20px 22px;margin-top:8px}
+.chart .t{font-weight:700;font-size:18px}.chart .s{color:var(--muted);font-size:14px;margin:2px 0 12px}
+.legend{display:flex;gap:18px;font-size:13.5px;color:var(--muted);margin-bottom:8px}.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.db{display:grid;grid-template-columns:160px 1fr 44px;gap:12px;align-items:center;height:34px}.db-l{font-size:14.5px}
+.db-t{position:relative;height:100%;border-left:1px solid var(--line);background:repeating-linear-gradient(90deg,transparent 0 calc(33.33% - 1px),var(--line) calc(33.33% - 1px) 33.33%)}
+.db-line{position:absolute;top:50%;height:3px;margin-top:-1.5px;background:var(--muted);opacity:.5}
+.dot{position:absolute;top:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%}.auth{background:var(--yellow)}.why{background:var(--teal)}
+.db-v{font-family:var(--mono);font-weight:700;font-size:13px;text-align:right}
+.axis{display:grid;grid-template-columns:160px 1fr 44px;gap:12px;font-family:var(--mono);font-size:11px;color:var(--muted)}.axis div{position:relative;height:14px}.axis div span{position:absolute;transform:translateX(-50%)}
+.src{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.cta{display:flex;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap}.btn{background:var(--yellow);color:#10221f;font-weight:700;font-size:16px;text-decoration:none;border-radius:8px;padding:11px 20px}
+.qs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.q{background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:16px}.q h3{font-size:17px;margin:0 0 8px}.q b{font-family:var(--display);font-weight:400;font-size:44px;line-height:1;display:block;color:var(--ink)}.q p{color:var(--muted);font-size:14px;margin:6px 0 10px}.q a{font-family:var(--mono);font-size:12.5px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
+</style><style>@media (max-width:700px){.stats,.qs{grid-template-columns:1fr}.db,.axis{grid-template-columns:110px 1fr 40px!important}.db-l{font-size:13px}}</style><style>.post{display:block;text-decoration:none;color:var(--ink)}.post:hover{border-color:var(--teal)}
+.post .big{margin:8px 0 6px}.links{margin-top:14px;font-family:var(--mono);font-size:12.5px;display:flex;flex-wrap:wrap;gap:8px 18px}</style>
+</head>
+<body><div class="wrap"><header>
+    <div class="brandrow">
+      <a class="brand" href="/" aria-label="aiforensic.io home">
+        <svg width="46" height="46" viewBox="0 0 90 90" fill="none" aria-hidden="true"><rect width="90" height="90" rx="16" fill="#1B5E5A"/><path d="M8,45 Q8,12 45,10 Q82,12 82,45 Q82,78 45,80 Q8,78 8,45" stroke="rgba(255,255,255,.13)" stroke-width="1.9"/><path d="M14,45 Q14,18 45,16 Q76,18 76,45 Q76,72 45,74 Q14,72 14,45" stroke="rgba(255,255,255,.24)" stroke-width="1.9"/><path d="M20,45 Q20,23 45,21 Q70,23 70,45 Q70,67 45,69 Q20,67 20,45" stroke="rgba(255,255,255,.37)" stroke-width="1.9"/><path d="M26,45 Q26,28 45,27 Q64,28 64,45 Q64,62 45,63 Q26,62 26,45" stroke="#F5C518" stroke-width="2.2"/><path d="M32,45 Q32,33 45,32 Q58,33 58,45 Q58,57 45,58 Q32,57 32,45" stroke="rgba(255,255,255,.62)" stroke-width="1.9"/><path d="M38,45 Q38,38 45,38 Q52,38 52,45 Q52,52 45,52 Q38,52 38,45" stroke="rgba(255,255,255,.85)" stroke-width="2"/><circle cx="45" cy="45" r="2.5" fill="#fff" opacity=".9"/></svg>
+        <div><div class="wordmark"><span class="ai">ai</span><b>forensic</b><span class="io">.io</span></div><div class="tagline">We test the intent.</div></div>
+      </a>
+      <nav style="display:flex;gap:8px"><a class="navlink" href="/report/">Report</a><a class="navlink" href="/blog/">Blog</a><a class="navlink" href="https://www.linkedin.com/in/omrisigelman/">LinkedIn ↗</a></nav>
+    </div>
+  </header>
+<section><div class="sechead"><h2>Blog</h2></div>
+<div class="card" style="--c:var(--v-launch)">
+  <div class="k">21 Oct 2026 · First study</div>
+  <a class="post" href="/blog/pushback/"><div class="big">Tell an AI it's wrong. It often agrees. Even when it's right.</div></a>
+  <p>I pushed back on 8 popular AI models, five times in a row, with no evidence at all. When did they change a correct answer? Results, method and limits.</p>
+  <div class="links"><a href="/blog/pushback/">Read the post →</a><a href="/pushback-report.pdf">Full report (PDF)</a></div>
+</div></section>
+<footer><span>© 2026 aiforensic.io</span><span>We test the intent.</span></footer>
+</div></body></html>
