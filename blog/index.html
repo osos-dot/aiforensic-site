@@ -56,7 +56,11 @@ h2{font-family:var(--display);font-weight:400;font-size:34px;letter-spacing:.5px
 footer{margin-top:44px;border-top:1.5px solid var(--line);padding-top:16px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-family:var(--mono);font-size:12px;color:var(--muted)}
 </style>
 <style>
-.hero2{padding:34px 0 10px}.titleblk{border-left:5px solid var(--yellow);padding:4px 0 4px 16px;margin-bottom:22px}.stitle{font-family:var(--display);font-size:44px;line-height:1;margin:6px 0 8px;font-weight:400}.smeta{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:13px;color:var(--muted)}.smeta b{color:var(--ink);font-weight:700}.kick{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--teal);text-transform:uppercase}
+.hero2{padding:34px 0 10px}.newbadge{display:inline-flex;align-items:center;gap:8px;background:var(--yellow);color:#10221f;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:5px 12px;margin-bottom:10px}
+.newbadge .nbdot{width:8px;height:8px;border-radius:50%;background:#10221f;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.newbadge .nbdot{animation:none}}
+.titleblk{border-left:5px solid var(--yellow);padding:4px 0 4px 16px;margin-bottom:22px}.stitle{font-family:var(--display);font-size:44px;line-height:1;margin:6px 0 8px;font-weight:400}.smeta{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:13px;color:var(--muted)}.smeta b{color:var(--ink);font-weight:700}.kick{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--teal);text-transform:uppercase}
 .h1b{font-family:var(--display);font-size:clamp(48px,7vw,80px);line-height:.92;margin:12px 0 18px;font-weight:400}.h1b span{color:var(--yellow)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
 .st{background:var(--surface);border:1.5px solid var(--line);border-top:5px solid var(--c);border-radius:10px;padding:14px 16px}

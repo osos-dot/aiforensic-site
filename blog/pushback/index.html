@@ -100,17 +100,22 @@ td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
 .tip span{color:var(--muted);font-size:15px}
 .callout{border-left:4px solid var(--yellow);background:var(--surface);border-radius:0 10px 10px 0;padding:12px 16px;margin:18px 0;font-size:16px}
 .todo{font-family:var(--mono);font-size:12px;color:var(--yellow)}
+.brandrow{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.navlink{font-family:var(--mono);font-size:12px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;text-decoration:none}
+.navlink:hover{border-color:var(--teal)}
 footer{margin-top:64px;border-top:1.5px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted)}
 @media (max-width:520px){.db,.bar{grid-template-columns:minmax(0,7.2em) 1fr 2.8em}.turn{grid-template-columns:4.6em 1fr auto}}
 </style>
 
 <div class="wrap">
 <header>
+  <div class="brandrow">
   <a class="brand" href="/" aria-label="aiforensic.io home">
     <svg width="42" height="42" viewBox="0 0 90 90" fill="none" aria-hidden="true"><rect width="90" height="90" rx="16" fill="#1B5E5A"/><path d="M8,45 Q8,12 45,10 Q82,12 82,45 Q82,78 45,80 Q8,78 8,45" stroke="rgba(255,255,255,.13)" stroke-width="1.9"/><path d="M14,45 Q14,18 45,16 Q76,18 76,45 Q76,72 45,74 Q14,72 14,45" stroke="rgba(255,255,255,.24)" stroke-width="1.9"/><path d="M20,45 Q20,23 45,21 Q70,23 70,45 Q70,67 45,69 Q20,67 20,45" stroke="rgba(255,255,255,.37)" stroke-width="1.9"/><path d="M26,45 Q26,28 45,27 Q64,28 64,45 Q64,62 45,63 Q26,62 26,45" stroke="#F5C518" stroke-width="2.2"/><path d="M32,45 Q32,33 45,32 Q58,33 58,45 Q58,57 45,58 Q32,57 32,45" stroke="rgba(255,255,255,.62)" stroke-width="1.9"/><path d="M38,45 Q38,38 45,38 Q52,38 52,45 Q52,52 45,52 Q38,52 38,45" stroke="rgba(255,255,255,.85)" stroke-width="2"/><circle cx="45" cy="45" r="2.5" fill="#fff" opacity=".9"/></svg>
     <div><div class="wordmark"><span class="ai">ai</span><b>forensic</b><span class="io">.io</span></div><div class="tagline">We test the intent.</div></div>
   </a>
-  
+  <nav style="display:flex;gap:8px;flex-wrap:wrap"><a class="navlink" href="/">Home</a><a class="navlink" href="/report/">Report</a><a class="navlink" href="/blog/">Blog</a><a class="navlink" href="https://www.linkedin.com/in/omrisigelman/">LinkedIn ↗</a></nav>
+  </div>
 </header>
 
 <div class="kicker">The AI Pushback Study · released 21 October 2026</div>
