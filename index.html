@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The AI Pushback Study · aiforensic.io</title>
-<meta name="description" content="Tell an AI it's wrong. It often agrees. Even when it's right. An independent, pre-registered study of 8 AI models from 6 labs, released 21 October 2026.">
+<title>aiforensic.io · We test the intent</title>
+<meta name="description" content="Independent research on whether AI models tell people the truth, especially when it's not what they want to hear. Latest: The AI Pushback Study (21 Oct 2026).">
 <meta property="og:title" content="The AI Pushback Study · aiforensic.io">
 <meta property="og:image" content="https://aiforensic.io/og-pushback.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -80,7 +80,36 @@ footer{margin-top:44px;border-top:1.5px solid var(--line);padding-top:16px;displ
 .q{background:var(--surface);border:1.5px solid var(--line);border-radius:10px;padding:16px}.q h3{font-size:17px;margin:0 0 8px}.q b{font-family:var(--display);font-weight:400;font-size:44px;line-height:1;display:block;color:var(--ink)}.q p{color:var(--muted);font-size:14px;margin:6px 0 10px}.q a{font-family:var(--mono);font-size:12.5px}
 .trust{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:14px}
 </style><style>@media (max-width:700px){.stats,.qs{grid-template-columns:1fr}.db,.axis{grid-template-columns:110px 1fr 40px!important}.db-l{font-size:13px}}</style><script data-goatcounter="https://omris.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-</head>
+<style>.newtag{background:var(--yellow);color:#10221f;font-weight:700;font-size:10px;border-radius:999px;padding:1px 6px;margin-left:4px;letter-spacing:.04em;text-transform:uppercase}
+.mainnav{display:flex;gap:8px;flex-wrap:wrap}.navlink.cur{border-color:var(--teal);font-weight:700}
+.about h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,6vw,64px);line-height:.95;margin:26px 0 10px}
+.about .lead{font-size:19px;line-height:1.5;max-width:720px;margin:0 0 26px}
+.about h2{font-family:var(--display);font-weight:400;font-size:32px;margin:34px 0 12px}
+.about p{line-height:1.6;max-width:720px}</style>
+<style>
+.hhero{padding:56px 0 30px}
+.hhero .tag{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+.hhero h1{font-family:var(--display);font-weight:400;font-size:clamp(64px,10vw,120px);line-height:.9;margin:10px 0 16px}
+.hhero h1 span{color:var(--yellow)}
+.hhero p{font-size:20px;line-height:1.5;max-width:640px;color:var(--muted);margin:0}
+.feat{display:grid;grid-template-columns:1.3fr 1fr;gap:0;border:1.5px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface);margin:10px 0 40px}
+.feat .l{padding:28px}
+.feat .r{background:#0f2a28;color:#eef4f2;padding:28px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.feat h2{font-family:var(--display);font-weight:400;font-size:44px;line-height:.95;margin:12px 0 8px}
+.feat h2 span{color:#B8860B}
+.feat .meta{font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:18px}
+.feat .btns{display:flex;gap:10px;flex-wrap:wrap}
+.hbtn{display:inline-block;border-radius:8px;padding:10px 16px;font-weight:700;text-decoration:none;font-size:15px}
+.hbtn.y{background:var(--yellow);color:#10221f}.hbtn.o{border:1.5px solid var(--line);color:var(--ink);background:transparent}
+.mini b{display:block;font-family:var(--display);font-weight:400;font-size:48px;line-height:1;color:#F5C518}
+.mini:nth-child(2) b{color:#7ECDC8}.mini:nth-child(3) b{color:#E38A6A}
+.mini span{font-size:14px;color:#cfe0dd}
+.what{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px}
+.what .card h3{margin:6px 0;font-family:var(--display);font-weight:400;font-size:28px;text-transform:uppercase;letter-spacing:.3px}
+.status{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.status.live{color:#2F7A4E}.status.soon{color:var(--muted)}
+@media(max-width:760px){.feat,.what{grid-template-columns:1fr}}
+</style></head>
 <body>
 <div class="wrap">
   <header>
@@ -89,31 +118,37 @@ footer{margin-top:44px;border-top:1.5px solid var(--line);padding-top:16px;displ
         <svg width="46" height="46" viewBox="0 0 90 90" fill="none" aria-hidden="true"><rect width="90" height="90" rx="16" fill="#1B5E5A"/><path d="M8,45 Q8,12 45,10 Q82,12 82,45 Q82,78 45,80 Q8,78 8,45" stroke="rgba(255,255,255,.13)" stroke-width="1.9"/><path d="M14,45 Q14,18 45,16 Q76,18 76,45 Q76,72 45,74 Q14,72 14,45" stroke="rgba(255,255,255,.24)" stroke-width="1.9"/><path d="M20,45 Q20,23 45,21 Q70,23 70,45 Q70,67 45,69 Q20,67 20,45" stroke="rgba(255,255,255,.37)" stroke-width="1.9"/><path d="M26,45 Q26,28 45,27 Q64,28 64,45 Q64,62 45,63 Q26,62 26,45" stroke="#F5C518" stroke-width="2.2"/><path d="M32,45 Q32,33 45,32 Q58,33 58,45 Q58,57 45,58 Q32,57 32,45" stroke="rgba(255,255,255,.62)" stroke-width="1.9"/><path d="M38,45 Q38,38 45,38 Q52,38 52,45 Q52,52 45,52 Q38,52 38,45" stroke="rgba(255,255,255,.85)" stroke-width="2"/><circle cx="45" cy="45" r="2.5" fill="#fff" opacity=".9"/></svg>
         <div><div class="wordmark"><span class="ai">ai</span><b>forensic</b><span class="io">.io</span></div><div class="tagline">We test the intent.</div></div>
       </a>
-      <nav style="display:flex;gap:8px"><a class="navlink" href="/report/">Report</a><a class="navlink" href="/blog/">Blog</a><a class="navlink" href="https://www.linkedin.com/in/omrisigelman/">LinkedIn ↗</a></nav>
+      <nav class="mainnav"><a class="navlink cur" href="/">Home</a><a class="navlink" href="/report/">Report</a><a class="navlink" href="/blog/">Blog <span class="newtag">New</span></a><a class="navlink" href="/about/">About</a><a class="navlink" href="https://www.linkedin.com/in/omrisigelman/">LinkedIn ↗</a></nav>
     </div>
   </header>
-<div class="hero2"><a class="newbadge" href="/report/"><span class="nbdot"></span>New report · out now</a>
-<div class="h1b">Tell an AI it's wrong.<br>It often agrees.<br><span>Even when it's right.</span></div>
-<div class="smeta"><span><b>The AI Pushback Study</b></span><span>Released <b>21 October 2026</b></span><span>By <b>Omri Sigelman</b></span></div>
-<div class="stats">
- <div class="st" style="--c:var(--yellow)"><b>27.2%</b><span>of correct answers changed after five unsupported "I'm a professional, that's wrong"</span></div>
- <div class="st" style="--c:var(--teal)"><b>1.7%</b><span>changed when we only asked "Why?" five times</span></div>
- <div class="st" style="--c:#E38A6A"><b>13.8%</b><span>were still wrong after the fifth pushback</span></div>
-</div>
-<div class="chart"><div class="t">Which models held their correct answers?</div><div class="s">Share of each model's correct answers that changed during five pushbacks</div>
-<div class="legend"><span><i class="auth"></i>"I'm a professional, that's wrong" ×5</span><span><i class="why"></i>"Why?" ×5</span></div>
-<div class="db"><span class="db-l">Claude Haiku 4.5</span><span class="db-t"><i class="db-line" style="left:18.0%;width:72.2%"></i><i class="dot why" style="left:18.0%"></i><i class="dot auth" style="left:90.2%"></i></span><span class="db-v">54%</span></div><div class="db"><span class="db-l">Mistral Small</span><span class="db-t"><i class="db-line" style="left:1.8%;width:77.5%"></i><i class="dot why" style="left:1.8%"></i><i class="dot auth" style="left:79.3%"></i></span><span class="db-v">48%</span></div><div class="db"><span class="db-l">Llama 3.3 70B</span><span class="db-t"><i class="db-line" style="left:1.8%;width:66.0%"></i><i class="dot why" style="left:1.8%"></i><i class="dot auth" style="left:67.8%"></i></span><span class="db-v">41%</span></div><div class="db"><span class="db-l">GPT-4o mini</span><span class="db-t"><i class="db-line" style="left:0.0%;width:42.5%"></i><i class="dot why" style="left:0.0%"></i><i class="dot auth" style="left:42.5%"></i></span><span class="db-v">26%</span></div><div class="db"><span class="db-l">Qwen3.8 27B</span><span class="db-t"><i class="db-line" style="left:0.0%;width:39.3%"></i><i class="dot why" style="left:0.0%"></i><i class="dot auth" style="left:39.3%"></i></span><span class="db-v">24%</span></div><div class="db"><span class="db-l">gpt-oss-120b</span><span class="db-t"><i class="db-line" style="left:0.0%;width:22.8%"></i><i class="dot why" style="left:0.0%"></i><i class="dot auth" style="left:22.8%"></i></span><span class="db-v">14%</span></div><div class="db"><span class="db-l">gpt-oss-20b</span><span class="db-t"><i class="db-line" style="left:0.0%;width:15.2%"></i><i class="dot why" style="left:0.0%"></i><i class="dot auth" style="left:15.2%"></i></span><span class="db-v">9%</span></div><div class="db"><span class="db-l">Gemini Flash</span><span class="db-t"><i class="db-line" style="left:0.0%;width:4.3%"></i><i class="dot why" style="left:0.0%"></i><i class="dot auth" style="left:4.3%"></i></span><span class="db-v">3%</span></div><div class="axis"><span></span><div><span style="left:0">0%</span><span style="left:33.33%">20%</span><span style="left:66.66%">40%</span><span style="left:100%">60%</span></div><span></span></div>
-<div class="src">Source: aiforensic.io, The AI Pushback Study · Wave 3, 9 Oct 2026 · 200 multiple-choice questions · pre-registered · tested model versions, this test only</div></div>
-<div class="cta"><a class="btn" href="/blog/pushback/">See the full results →</a><a href="/pushback-report.pdf" style="font-family:var(--mono);font-size:13px" data-goatcounter-click="download-report-pdf">Download the report (PDF)</a></div>
-</div>
-<section><div class="sechead"><h2>What else we found</h2></div>
-<div class="qs">
- <div class="q"><h3>How sure did they sound when wrong?</h3><b>90%</b><p>Median stated confidence of Mistral Small and gpt-oss-20b when switching to a wrong answer.</p><a href="/blog/pushback/#confidence">See confidence by model →</a></div>
- <div class="q"><h3>Does one line in the prompt fix it?</h3><b>27% → 19%</b><p>It cut the changes. It also blocked real corrections.</p><a href="/blog/pushback/#fix">See the trade-off →</a></div>
- <div class="q"><h3>Are easy questions safe?</h3><b>39%</b><p>Easy geography changed almost as often as law (45%). Maths: 10%.</p><a href="/blog/pushback/#topics">See all 8 topics →</a></div>
-</div></section>
 
-  <section id="how">
+
+<div class="hhero">
+ <div class="tag">Independent AI research</div>
+ <h1>We test<br><span>the intent.</span></h1>
+ <p>Do AI models tell people the truth, especially when it's not what they want to hear? We run controlled, repeatable tests on widely used models and publish what we find.</p>
+</div>
+<div class="sechead"><h2>Latest study</h2></div>
+<div class="feat">
+ <div class="l">
+  <a class="newbadge" href="/report/"><span class="nbdot"></span>New · 21 Oct 2026</a>
+  <h2>The AI Pushback Study<br><span>Tell an AI it's wrong. It often agrees.</span></h2>
+  <div class="meta">8 AI models · 6 labs · 2 pre-registered experiments · By Omri Sigelman</div>
+  <div class="btns"><a class="hbtn y" href="/blog/pushback/">Read the results →</a><a class="hbtn o" href="/pushback-report.pdf" data-goatcounter-click="download-report-pdf">Report (PDF)</a></div>
+ </div>
+ <div class="r">
+  <div class="mini"><b>27.2%</b><span>of correct answers changed after five "I'm a professional, that's wrong"</span></div>
+  <div class="mini"><b>1.7%</b><span>changed when we only asked "Why?"</span></div>
+  <div class="mini"><b>13.8%</b><span>were still wrong after the fifth push</span></div>
+ </div>
+</div>
+<div class="sechead"><h2>What we test</h2></div>
+<div class="what">
+ <div class="card" style="--c:var(--yellow)"><div class="status live">● Published</div><h3>Pushback</h3><p>Does an AI give up a correct answer when you insist it's wrong?</p></div>
+ <div class="card" style="--c:var(--teal)"><div class="status live">● Published</div><h3>Confidence</h3><p>Does it sound sure when it's wrong? Several models said 85–90%.</p></div>
+ <div class="card" style="--c:var(--line)"><div class="status soon">○ In progress</div><h3>Next study</h3><p>Coming soon. Follow on LinkedIn to see it first.</p></div>
+</div>
+<section id="how">
     <div class="sechead"><h2>How we work</h2></div>
     <div class="grid">
       <div class="card" style="--c:var(--v-research)"><div class="k">Method</div><h3>Pre-registered</h3><p>Hypotheses and analysis are fixed on OSF before every run.</p></div>
@@ -122,16 +157,6 @@ footer{margin-top:44px;border-top:1.5px solid var(--line);padding-top:16px;displ
       <div class="card" style="--c:var(--v-product)"><div class="k">Funding</div><h3>Independent</h3><p>Not affiliated with or funded by any AI company.</p></div>
     </div>
   </section>
-
-  <section id="who">
-    <div class="sechead"><h2>Who</h2></div>
-    <div class="card who" style="--c:var(--teal)">
-      <p><b>Omri Sigelman</b>, independent researcher. Contact me on <a href="https://www.linkedin.com/in/omrisigelman/">LinkedIn</a>.</p>
-      <p class="small">Disclosure: we use Claude (Anthropic) as an assistant to build and analyse our studies, and ChatGPT (OpenAI) and Gemini (Google) to review them. Models from all three companies are among those we test.</p>
-    </div>
-  </section>
-
-  <footer><span>© 2026 aiforensic.io</span><span>We test the intent.</span><span>Visits are counted with GoatCounter: no cookies, no personal data.</span></footer>
-</div>
-</body>
-</html>
+<section><div class="card" style="--c:var(--teal)"><h3>About aiforensic.io</h3><p>Founded by Omri Sigelman. Independent, not funded by any AI company. <a href="/about/">Who we are and how we work →</a></p></div></section>
+<footer><span>© 2026 aiforensic.io</span><span>We test the intent.</span><span>Visits are counted with GoatCounter: no cookies, no personal data.</span></footer>
+</div></body></html>
